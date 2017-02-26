@@ -193,9 +193,9 @@ void ofxBlobTracker::track(ofxContourFinder* newBlobs){
 					// Here we have a weighted low-pass filter
 					// adaptively adjust the blob position filtering strength based on blob movement
 					// http://www.wolframalpha.com/input/?i=plot+1/exp(x/15)+and+1/exp(x/10)+and+1/exp(x/5)+from+0+to+100
-					float a = 1.0f - 1.0f / expf(posDelta / (1.0f + (float) movementFiltering*10));
-					trackedBlobs[i].centroid.x = a * trackedBlobs[i].centroid.x + (1-a) * trackedBlobs[i].lastCentroid.x;
-					trackedBlobs[i].centroid.y = a * trackedBlobs[i].centroid.y + (1-a) * trackedBlobs[i].lastCentroid.y;
+//					float a = 1.0f - 1.0f / expf(posDelta / (1.0f + (float) movementFiltering*10));
+//					trackedBlobs[i].centroid.x = a * trackedBlobs[i].centroid.x + (1-a) * trackedBlobs[i].lastCentroid.x;
+//					trackedBlobs[i].centroid.y = a * trackedBlobs[i].centroid.y + (1-a) * trackedBlobs[i].lastCentroid.y;
                     
 					//get the Differences in position
 					trackedBlobs[i].D.set(trackedBlobs[i].centroid.x - trackedBlobs[i].lastCentroid.x, 

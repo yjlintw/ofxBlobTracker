@@ -25,7 +25,7 @@ public:
     
     int     size(){return trackedBlobs.size(); };
     
-    ofxBlob operator[](unsigned int _n){ if ( (_n >= 0U) && (_n < trackedBlobs.size()) ) return trackedBlobs[_n]; };
+    ofxBlob& operator[](unsigned int _n){ if ( (_n >= 0U) && (_n < trackedBlobs.size()) ) return trackedBlobs[_n]; };
     
     ofEvent<ofxBlob>    blobAdded;
     ofEvent<ofxBlob>    blobMoved;
